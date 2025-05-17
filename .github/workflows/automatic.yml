@@ -11,10 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-rust@v1
-        with:
-          rust-version: stable
-      - name: Run cargo check and game in automatic mode
-        run: |
-          cargo check --offline
-          cargo run -- --automatic
+      - run: cargo run -- --automatic
