@@ -100,7 +100,9 @@ fn battle(player: &mut Character, enemy: &mut Character, automatic: bool) -> boo
 
 fn run_game(automatic: bool) {
     println!("Welcome to Rusty RPG!");
-    print_features();
+    if !automatic {
+        print_features();
+    }
     let mut player = Character {
         name: String::from("Hero"),
         hp: 30,
